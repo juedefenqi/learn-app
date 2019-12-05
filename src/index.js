@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './style/index.less';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router, Route} from 'react-router-dom'//, Link
+import {ConfigProvider }from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
 //路由模式
 // ReactJS 的5种路由模式
 // 我们一直在使用的路由方式是BrowserRouter，也就是浏览器的路由方式，其实React还有几种路由方式：
@@ -26,9 +28,11 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'//, Link
 //keyLength: number    location.key 的长度，默认为 6。
 //children: node       要呈现的单个子元素（组件）
 ReactDOM.render(
-    <Router basename={'/'}>
-        <Route path={`/`} component={App}/>
-    </Router>
+    <ConfigProvider locale={zhCN} autoInsertSpaceInButton='false'>
+        <Router basename={'/'}>
+            <Route path={`/`} component={App}/>
+        </Router>
+    </ConfigProvider>
     , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

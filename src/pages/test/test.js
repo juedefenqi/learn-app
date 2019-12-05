@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-//import './component/tabs.scss';
+import './component/tabs.less';
 import {Button }from 'antd';
 class Test extends Component {
     render() {

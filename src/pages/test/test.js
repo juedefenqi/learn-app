@@ -1,25 +1,13 @@
 import React,{Component} from 'react';
-
+//import './component/tabs.scss';
+import {Button }from 'antd';
 class Test extends Component {
     render() {
-        const Button=({color,text})=>{
-            return{
-                type:'button',
-                props:{
-                    className:`btn btn-${color}`,
-                    children:{
-                        type:'em',
-                        props:{
-                            children:text
-                        }
-                    }
-                }
-            }
-        }
         return (
         <div className={'page'}>
             <h1>
                 test !!!!
+                <Button type="primary">Button 你     好</Button>
             </h1>
         </div>
         )

@@ -9,7 +9,7 @@ class App extends Component{
          const authPath='/login';// 默认未登录的时候返回的页面，可以自行设置
          const authed=true;//this.props.state.authed||localStorage.getItem('authed')|| 如果登陆之后可以利用redux修改该值
          return(
-             <div className="display_flex">
+             <div className="page display_flex">
                  <Router basename={'/'}>
                      <Switch>
                          {renderRoutes(routes,authed,authPath)}

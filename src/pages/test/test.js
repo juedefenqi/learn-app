@@ -1,10 +1,34 @@
 import React,{Component} from 'react';
 import {Button,Tabs,Icon }from 'antd';
+import './component/tabs/index.less'
 import Counter from './component/Counter/Counter';
+import {EventEmitter} from "events";
+
 const {TabPane} = Tabs;
 class Test extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            inputValue:'',
+            textareaValue:''
+        }
+    }
+    static defaultProps={}
     static propTypes={}
+    handleInputChange=(e)=>{
+        console.log(e)
+        this.setState({
+            inputValue:e.target.value,
+        })
+    }
+    handleTextareaChange=(e)=>{
+        console.log(e)
+        this.setState({
+            textareaValue:e.target.value,
+        })
+    }
     render() {
+        const {inputValue,textareaValue} =this.state
         return (
         <div className={'page'}>
             <h1>
@@ -25,6 +49,8 @@ class Test extends Component {
                 ]}
                 >
                 </Tabs>
+                <p><input type="text"  value={inputValue} onChange={this.handleInputChange}/></p>
+                <p><textarea value={textareaValue} onChange={this.handleTextareaChange}></textarea></p>
             </div>
         </div>
         )

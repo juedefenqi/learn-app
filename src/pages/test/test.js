@@ -2,7 +2,8 @@ import React,{Component} from 'react';
 import {Button,Tabs,Icon }from 'antd';
 import './component/tabs/index.less'
 import Counter from './component/Counter/Counter';
-import {EventEmitter} from "events";
+import request from '../../utils/request'
+//import {EventEmitter} from "events";
 
 const {TabPane} = Tabs;
 class Test extends Component {
@@ -12,6 +13,7 @@ class Test extends Component {
             inputValue:'',
             textareaValue:''
         }
+        this.requestList();
     }
     static defaultProps={}
     static propTypes={}
@@ -25,6 +27,24 @@ class Test extends Component {
         console.log(e)
         this.setState({
             textareaValue:e.target.value,
+        })
+    }
+    requestList(){
+        request({
+            url:'/xboot/downloadResources/selectDownloadResourcesPageVoMap',
+            type:'get',
+            params:{
+            }
+        }).then(res =>{
+            console.log(res)
+        })
+        request({
+            url:'/api/data',
+            type:'get',
+            params:{
+            }
+        }).then(res =>{
+            console.log(res)
         })
     }
     render() {

@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {Button,Tabs,Icon }from 'antd';
 import './component/tabs/index.less'
 import Counter from './component/Counter/Counter';
-import request from '../../utils/request'
+import request,{getRequest,postRequest} from '../../utils/request'
 //import {EventEmitter} from "events";
 
 const {TabPane} = Tabs;
@@ -34,16 +34,15 @@ class Test extends Component {
             url:'/xboot/downloadResources/selectDownloadResourcesPageVoMap',
             type:'get',
             params:{
+                id:'liming'
             }
         }).then(res =>{
             console.log(res)
         })
-        request({
-            url:'/api/data',
-            type:'get',
-            params:{
-            }
-        }).then(res =>{
+        postRequest('/testPost',{id:'2213213213123123'}).then(res=>{
+            console.log(res)
+        })
+        getRequest('/test').then(res=>{
             console.log(res)
         })
     }

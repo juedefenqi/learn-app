@@ -20,15 +20,11 @@ const asyncComponent = importComponent => {
                      justifyContent: "center",
                      alignItems: "center",
                      height: "100vh",
-                     fontSize: "40px"
+                     fontSize: "40px",
+                     width:"100%",
                  }
                  const C=this.state.component;
-                 return C?(
-                     <C {...this.props}></C>):(
-                      <div style={styleObj}>
-                          <Spin tip={'Loading...'}></Spin>
-                      </div>
-                 );
+                  return C? (<C {...this.props}></C>):(<div style={styleObj}><Spin tip={'Loading...'}></Spin></div>);
               }
      }
 }

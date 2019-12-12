@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import renderRoutes from './utils/renderRoutes';
-import routes from './router/router';
+import routes from './router/index';
 import './api/mock/data';
 import './App.css';
 class App extends Component{

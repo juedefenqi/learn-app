@@ -1,18 +1,19 @@
+//封装loading...
 import React,{Component} from  'react';
 import {Spin} from 'antd';
-const asyncComponent=importComponent=>{
+const asyncComponent = importComponent => {
      return class extends Component {
-             constructor(){
-                 super()
+             constructor(props){
+                 super(props)
                  this.state={
                      component:null
                  };
              }
-             componentDidMount(){
-                     importComponent().then(cmp=>{
-                         this.setState({component:cmp.default})
-                     })
-                 }
+             componentDidMount() {
+                 importComponent().then(cmp => {
+                     this.setState({ component: cmp.default });
+                 });
+             }
               render() {
                  const styleObj={
                      display: "flex",

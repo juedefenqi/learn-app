@@ -1,3 +1,4 @@
+//request axios 的头部全局设置
 const config={
     baseURL:'',
     timeout:10000,

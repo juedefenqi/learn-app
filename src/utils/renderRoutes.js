@@ -1,3 +1,4 @@
+//加载路由模块函数组件
 import React from 'react';
 import {Route,Redirect,Switch} from 'react-router-dom';
 const renderRouters=(routes,authed,authPath='/login',extraProps={},switchProps={})=>routes?(

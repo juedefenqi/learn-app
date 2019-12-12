@@ -1,6 +1,6 @@
-import Test from '../pages/test/test';
-// import AsyncComponent from '../utils/asyncComponent';
-// const test = AsyncComponent(()=>{import('../pages/test/test')})
+
+import AsyncComponent from '../utils/asyncComponent';
+const Test= AsyncComponent(()=>import('../pages/test'))
 const testRouter=[
     {
         path:'/test',

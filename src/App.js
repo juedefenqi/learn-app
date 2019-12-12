@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { BrowserRouter as Router, Switch   } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 import renderRoutes from './utils/renderRoutes';
 import routes from './router/router';
 import './api/mock/data';

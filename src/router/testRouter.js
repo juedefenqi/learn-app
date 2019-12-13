@@ -1,4 +1,3 @@
-
 import AsyncComponent from '../utils/asyncComponent';
 const Test= AsyncComponent(()=>import('../pages/test'))
 const testRouter=[

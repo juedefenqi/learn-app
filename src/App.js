@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 import renderRoutes from './utils/renderRoutes';
 import routes from './router/index';
 import './api/mock/data';
-import './App.css';
 class App extends Component{
      render() {
          const authPath='/login';// 默认未登录的时候返回的页面，可以自行设置

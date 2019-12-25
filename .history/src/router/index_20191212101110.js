@@ -1,7 +1,7 @@
 import testRouter from './testRouter'
-import commonRouter from './commonRouter'
+import privateRouter from './private-router'
 const routes =[
     ...testRouter,
-    ...commonRouter
+    ...privateRouter
 ]
 export default routes
